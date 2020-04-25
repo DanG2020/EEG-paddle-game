@@ -10,3 +10,6 @@ npm install --save muse-js
 
 npm install --save systemjs
 
+Then Read Me will need to be added
+
+npm install -g live-server
