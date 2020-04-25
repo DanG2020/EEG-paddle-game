@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<style>
+
+</style>
+<head>
+    <meta charset="utf-8" />
+    <title>Gamedev Canvas Workshop</title>
+    <link rel="stylesheet" type="text/css" href="Breakout.css">
+    <script src="node_modules/systemjs/dist/system.js"></script>
+    <script>
+        System.config({
+            packages: {
+                'muse-js': {
+                    defaultJSExtensions: true,
+                    main: 'muse.js',
+                },
+                'rxjs': {
+                    defaultJSExtensions: true,
+                }
+            },
+            map: {
+                'rxjs': 'node_modules/rxjs/',
+                'muse-js': 'node_modules/muse-js/dist'
+            }
+        });
+      SystemJS.import('brain.js');
+    </script>
+</head>
+<body>
+
+<canvas id="myCanvas" width="960" height="640"></canvas>
+<script type="text/javascript" src="Breakout.js"></script>
+
+<div>
+    <button onclick="connectToMuse()"> Connect </button>
+</div>
+
+</body>
+</html>
